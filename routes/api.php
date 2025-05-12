@@ -60,11 +60,4 @@ Route::middleware('auth:api', 'role:owner')->group(function () {
     Route::get('/user/{user}', [UserController::class, 'show']);
     Route::put('/user/{user}', [UserController::class, 'update']);
     Route::delete('/user/{user}', [UserController::class, 'destroy']);
-    Route::get('/user/{user}/transaksi', [UserController::class, 'transaksi']);
-    Route::get('/user/{user}/detail-transaksi', [UserController::class, 'detailTransaksi']);
-    Route::get('/user/{user}/role', [UserController::class, 'role']);
-    Route::get('/produk/{produk}/thumbnail', [ProdukController::class, 'thumbnail']);
-    Route::get('/produk/{produk}/detail-transaksi', [ProdukController::class, 'detailTransaksi']);
-    Route::get('/transaksi/{transaksi}/detail-transaksi', [TransaksiController::class, 'detailTransaksi']);
-    Route::get('/detail-transaksi/{detailTransaksi}/produk', [DetailTransaksiController::class, 'produk']);
 });
